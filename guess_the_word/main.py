@@ -23,12 +23,11 @@ header = """
 This is a game to guess the word
 choose which one you want to guess
 1. animals
-2. dictionary
 """
 print(header)
 
 choose_from = input("enter: ")
-while choose_from not in ['1','2']:
+while choose_from not in ['1']:
     print('invalid choice !!')
     choose_from = input("enter: ")
 
@@ -40,10 +39,11 @@ elif choose_from=='2':
         word_list = file.readlines()
 
 
-
+score = 0
 while True:
     word = random.choice(word_list).strip().upper()
-    hint = ['-']*len(word)
+    hint = [' ' if i==' ' else '-' for i in word]
+    chance = 5
     while hint.count('-')>0:
         print('\n',''.join(hint))
         guess = input('Guess the word : ').upper()
@@ -56,7 +56,9 @@ while True:
                 print(f"the letter '{guess}' is not in the word")
         else:
             if guess == word:
+                score+=1
                 print("YOU WIN !!!!")
+                print(f"your score is {score}")
                 # rm = input("do you want to remove this word(y/n): ")
                 # if rm.lower()=='y':
                 #     remove_word(word)
@@ -65,14 +67,19 @@ while True:
             else:
                 print(f"the word '{guess}' is incorrect")
             
-        if hint.count('-')==0 and guess != word:
-            print("Sorry you LOSE !!")
+        if (hint.count('-')==0 and guess != word) or chance==0:
+            print("Sorry you LOSE !!!")
             print((f"the word was {word}"))
             rm = input("do you want to remove this word(y/n): ")
             if rm.lower()=='y':
                 remove_word(word)
             print()
             break
+        if hint.count('-')<=2:
+            print(f"you have {chance} chance remaining")
+            chance-=1
     play = input("\nDo you want to play again?(y/n): ")
     if play.lower() == 'n':
+        print("Thank you for playing")
+        print(f"your score is: {score} !!!")
         quit()

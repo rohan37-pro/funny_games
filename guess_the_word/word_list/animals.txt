@@ -9,7 +9,6 @@ Ape
 Armadillo
 Ass
 Baboon
-Barnacle
 Barracuda
 Basilisk
 Bass
@@ -23,17 +22,13 @@ Blue whale
 Bluebird
 Boa
 Boar
-Box jellyfish
 Buffalo
-Buffalo, african
-Buffalo, american (bison)
 Bug
 Butterfly
 Buzzard
 Camel
 Canid
 Canidae
-Cape buffalo
 Capybara
 Cardinal
 Caribou
@@ -61,7 +56,6 @@ Cock
 Cockroach
 Cod
 Condor
-Constrictor
 Coral
 Cougar
 Cow
@@ -130,7 +124,6 @@ Jellyfish
 Kangaroo
 Kingfisher
 Koala
-Leech
 Lemur
 Leopard
 Lion
@@ -147,12 +140,10 @@ Marlin
 Mink
 Mole
 Mongoose
-Monitor lizard
 Monkey
 Moose
 Mosquito
 Moth
-Mountain goat
 Mouse
 Mule
 Ocelot
@@ -166,7 +157,6 @@ Panther
 Parakeet
 Parrot
 Peacock
-Peafowl
 Penguin
 Pig
 Pigeon
