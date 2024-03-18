@@ -14,7 +14,10 @@ def remove_word(word):
         with open("word_list/animals.txt", 'w') as file:
             file.write(''.join(word_list))
     elif choose_from=='2':
-        with open("word_list/dictionary.txt", 'w') as file:
+        with open("word_list/flowers.txt", 'w') as file:
+            file.write(''.join(word_list))
+    elif choose_from=='3':
+        with open("word_list/fruits.txt", 'w') as file:
             file.write(''.join(word_list))
 
 
@@ -23,11 +26,13 @@ header = """
 This is a game to guess the word
 choose which one you want to guess
 1. animals
+2. flowers
+3. fruits
 """
 print(header)
 
 choose_from = input("enter: ")
-while choose_from not in ['1']:
+while choose_from not in ['1', '2', '3']:
     print('invalid choice !!')
     choose_from = input("enter: ")
 
@@ -35,7 +40,10 @@ if choose_from == '1':
     with open("word_list/animals.txt", 'r') as file:
         word_list = file.readlines()
 elif choose_from=='2':
-    with open("word_list/dictionary.txt", 'r') as file:
+    with open("word_list/flowers.txt", 'r') as file:
+        word_list = file.readlines()
+elif choose_from=='3':
+    with open("word_list/fruits.txt", 'r') as file:
         word_list = file.readlines()
 
 
