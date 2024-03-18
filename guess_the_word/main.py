@@ -11,10 +11,10 @@ def remove_word(word):
             print(f"'{l.strip()}' is removed")
             break
     if choose_from == '1':
-        with open("animals.txt", 'w') as file:
+        with open("word_list/animals.txt", 'w') as file:
             file.write(''.join(word_list))
     elif choose_from=='2':
-        with open("dictionary.txt", 'w') as file:
+        with open("word_list/dictionary.txt", 'w') as file:
             file.write(''.join(word_list))
 
 
@@ -33,10 +33,10 @@ while choose_from not in ['1','2']:
     choose_from = input("enter: ")
 
 if choose_from == '1':
-    with open("animals.txt", 'r') as file:
+    with open("word_list/animals.txt", 'r') as file:
         word_list = file.readlines()
 elif choose_from=='2':
-    with open("dictionary.txt", 'r') as file:
+    with open("word_list/dictionary.txt", 'r') as file:
         word_list = file.readlines()
 
 
