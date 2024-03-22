@@ -56,6 +56,7 @@ if __name__=="__main__":
         stick_count_lose = 0
         switch_count_win = 0
         switch_count_lose = 0
+        print(f"simulating game for {d*1000} cases")
         for i in range(d*1000):
             doors = generate_doors(d)
             ran_strategy = strategy._random_(d)
@@ -111,13 +112,13 @@ lose {switch_count_lose}"""
                 print("you win ")
                 win+=1
                 print(f"score : win {win}, lose {lose}")
-                print(doors)
+                # print(doors)
                 print()
             else :
                 lose +=1
                 print("sorry !!!")
                 print("you lose")
-                print(doors)
+                # print(doors)
                 print()
             play_again = input("do you want to play again?(y/n)")
             if play_again == 'n':
